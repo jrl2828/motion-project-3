@@ -15,9 +15,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, ot
 })
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`myTile0`, function (sprite, location) {
     if (true) {
-        info.changeLifeBy(-1)
-        sprite.destroy()
         music.thump.play()
+        game.over(false)
     }
 })
 let ball1: Sprite = null
